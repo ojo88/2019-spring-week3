@@ -11,4 +11,7 @@ Example from Week 3 of OKCoders
     * npm start
 
     Application should be running on localhost:3000
-    
+
+## Stuff to do later
+
+    * Look through the monggose section of the class

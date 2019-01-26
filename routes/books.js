@@ -31,4 +31,30 @@ router.get('/all', function(req,res, next){
         }
     });
 })
+
+router.get('/:id', function(req,res,nex) {
+    Book.findById(req.params.id).exec(function(err, data){
+        if(err){
+            console.log(err);
+            res.status(500);
+        }
+        else{
+            res.json(data);
+        }
+        
+    });
+});
+
+router.post('/new', (req,res,next) => {
+    var newBook = new Book(req.body);
+    newBook.save(function(err,result){
+        if(err){
+            console.log(err);
+            res.status(500);
+        }
+        else {      
+            res.json({status: result});
+        }
+    })
+})
 module.exports = router;
