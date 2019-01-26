@@ -9,3 +9,6 @@ Example from Week 3 of OKCoders
     * run mongod --dbpath db/
 * on another commandline run:
     * npm start
+
+    Application should be running on localhost:3000
+    
